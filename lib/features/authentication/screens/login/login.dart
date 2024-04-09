@@ -6,8 +6,8 @@ import 'package:e_commerse/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../common/widgets_login_signup/form_divider.dart';
-import '../../../../common/widgets_login_signup/social_buttons.dart';
+import '../../../../common/widgets/login_signup/form_divider.dart';
+import '../../../../common/widgets/login_signup/social_buttons.dart';
 import 'widgets/login_header.dart';
 
 class LoginScreen extends StatelessWidget {
