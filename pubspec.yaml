@@ -63,6 +63,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/logos/
+    - assets/icons/
     - assets/images/on_boarding_images/
 
   fonts:
