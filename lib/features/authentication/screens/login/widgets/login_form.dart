@@ -1,4 +1,5 @@
 import 'package:e_commerse/features/authentication/screens/signup/signup.dart';
+import 'package:e_commerse/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -69,7 +70,7 @@ class TLoginForm extends StatelessWidget {
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () {}, child: Text(TTexts.signIn))),
+                    onPressed: () => Get.to(() => const NavigationMenu()), child: const Text(TTexts.signIn))),
             const SizedBox(
               height: TSizes.spaceBtwItems,
             ),
@@ -79,7 +80,7 @@ class TLoginForm extends StatelessWidget {
                 width: double.infinity,
                 child: OutlinedButton(
                     onPressed: () => Get.to(() => const SignupScreen()),
-                    child: Text(TTexts.createAccount))),
+                    child: const Text(TTexts.createAccount))),
           ],
         ),
       ),
