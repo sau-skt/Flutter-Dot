@@ -1,12 +1,13 @@
+
+import 'package:e_commerse/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:e_commerse/utils/constants/colors.dart';
 import 'package:e_commerse/utils/constants/image_strings.dart';
 import 'package:e_commerse/utils/constants/sizes.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
+import '../../../../common/widgets/layout/grid_layout.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import 'widgets/home_appbar.dart';
 import 'widgets/home_categories.dart';
@@ -17,11 +18,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TPrimaryHeaderContainer(
+            const TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   THomeAppBar(),
@@ -55,7 +56,13 @@ class HomeScreen extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.all(TSizes.defaultSpace),
-              child: TPromoSlider(banners: [TImages.banner1, TImages.banner2, TImages.banner3],),
+              child: Column(
+                children : 
+                [
+                  const TPromoSlider(banners: [TImages.banner1, TImages.banner2, TImages.banner3],),
+                  const SizedBox(height: TSizes.spaceBtwSections,),
+                  TGridLayout(itemCount: 2,itemBuilder: (_, index) => const TProductCardVertical()),
+                ]),
             ),
           ],
         ),
@@ -63,3 +70,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
