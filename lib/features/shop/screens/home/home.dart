@@ -9,9 +9,9 @@ import '../../../../common/widgets/custom_shapes/containers/primary_header_conta
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/layout/grid_layout.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
-import 'widgets/home_appbar.dart';
-import 'widgets/home_categories.dart';
-import 'widgets/promo_slider.dart';
+import '../../../authentication/screens/home/widgets/home_appbar.dart';
+import '../../../authentication/screens/home/widgets/home_categories.dart';
+import '../../../authentication/screens/home/widgets/promo_slider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -55,11 +55,13 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(TSizes.defaultSpace),
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children : 
                 [
                   const TPromoSlider(banners: [TImages.banner1, TImages.banner2, TImages.banner3],),
+                  const SizedBox(height: TSizes.spaceBtwSections,),
+                  TSectionHeading(title: 'Popular Products', onPressed: () {},),
                   const SizedBox(height: TSizes.spaceBtwSections,),
                   TGridLayout(itemCount: 2,itemBuilder: (_, index) => const TProductCardVertical()),
                 ]),
