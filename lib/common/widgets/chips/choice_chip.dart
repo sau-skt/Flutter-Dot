@@ -1,4 +1,3 @@
-import 'dart:isolate';
 
 import 'package:e_commerse/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:e_commerse/utils/helpers/helper_functions.dart';
