@@ -3,6 +3,7 @@ import 'package:e_commerse/common/widgets/custom_shapes/containers/primary_heade
 import 'package:e_commerse/common/widgets/list_tiles/settings_menu.dart';
 import 'package:e_commerse/common/widgets/texts/section_heading.dart';
 import 'package:e_commerse/features/personalization/screens/address/address.dart';
+import 'package:e_commerse/features/shop/screens/order/order.dart';
 import 'package:e_commerse/utils/constants/colors.dart';
 import 'package:e_commerse/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +38,7 @@ class SettingsScreen extends StatelessWidget {
                 const SizedBox(height: TSizes.spaceBtwItems,),
                 TSettingsMenuTile(icon: Iconsax.safe_home, title: 'My Addresses', subTitle: 'Set shopping delivery address', onTap: () => Get.to(() => const UserAddressScreen(),),),
                 const TSettingsMenuTile(icon: Iconsax.shopping_cart, title: 'My Cart', subTitle: 'Add, remove products and move to checkout'),
-                const TSettingsMenuTile(icon: Iconsax.bag_tick, title: 'My Orders', subTitle: 'In-progress and Completed Orders'),
+                TSettingsMenuTile(icon: Iconsax.bag_tick, title: 'My Orders', subTitle: 'In-progress and Completed Orders', onTap: () => Get.to(() => const OrderScreen()),),
                 const TSettingsMenuTile(icon: Iconsax.bank, title: 'Bank Account', subTitle: 'Withdraw balance to registered bank account'),
                 const TSettingsMenuTile(icon: Iconsax.discount_shape, title: 'My Coupons', subTitle: 'List of all the discounted coupons'),
                 const TSettingsMenuTile(icon: Iconsax.notification, title: 'Notifications', subTitle: 'Set any kind of notification message'),

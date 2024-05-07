@@ -4,7 +4,6 @@ import 'package:e_commerse/features/shop/screens/cart/widgets/cart_items.dart';
 import 'package:e_commerse/features/shop/screens/checkout/widgets/billing_address_section.dart';
 import 'package:e_commerse/features/shop/screens/checkout/widgets/billing_amount_section.dart';
 import 'package:e_commerse/features/shop/screens/checkout/widgets/billing_payment_section.dart';
-import 'package:e_commerse/features/shop/screens/home/home.dart';
 import 'package:e_commerse/navigation_menu.dart';
 import 'package:e_commerse/utils/constants/colors.dart';
 import 'package:e_commerse/utils/constants/image_strings.dart';
