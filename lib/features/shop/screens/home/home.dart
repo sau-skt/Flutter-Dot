@@ -1,9 +1,11 @@
 
 import 'package:e_commerse/common/widgets/products/product_cards/product_card_vertical.dart';
+import 'package:e_commerse/features/shop/screens/all_products/all_products.dart';
 import 'package:e_commerse/utils/constants/colors.dart';
 import 'package:e_commerse/utils/constants/image_strings.dart';
 import 'package:e_commerse/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
@@ -62,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                 [
                   const TPromoSlider(banners: [TImages.banner1, TImages.banner2, TImages.banner3],),
                   const SizedBox(height: TSizes.spaceBtwSections,),
-                  TSectionHeading(title: 'Popular Products', onPressed: () {},),
+                  TSectionHeading(title: 'Popular Products', onPressed: () => Get.to(() => const AllProducts()),),
                   const SizedBox(height: TSizes.spaceBtwSections,),
                   TGridLayout(itemCount: 2,itemBuilder: (_, index) => const TProductCardVertical()),
                 ]),
